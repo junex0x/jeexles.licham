@@ -1,0 +1,16 @@
+{
+  "name": "jeexles.licham — Lịch âm Việt Nam",
+  "short_name": "Lịch âm",
+  "id": "./",
+  "description": "Lịch âm dương Việt Nam. Tra cứu, chuyển đổi ngày, ngày lễ, sự kiện của tôi.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#fffaf7",
+  "theme_color": "#fffaf7",
+  "lang": "vi",
+  "icons": [
+    {"src":"./assets/icon-192.png","sizes":"192x192","type":"image/png","purpose":"any maskable"},
+    {"src":"./assets/icon-512.png","sizes":"512x512","type":"image/png","purpose":"any maskable"}
+  ]
+}
