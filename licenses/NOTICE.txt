@@ -1,7 +1,0 @@
-Thuật toán âm lịch dựa trên jQuery.AmLich v0.3.1 (Ngô Minh Tuấn), nguồn gốc mã của Hồ Ngọc Đức.
-
-Copyright 2004 Ho Ngoc Duc. All Rights Reserved.
-Permission to use, copy, modify, and redistribute this software and its documentation for personal, non-commercial use is hereby granted provided that this copyright notice appears in all copies.
-
-Ứng dụng và thiết kế giao diện: jeexles — jeexles.licham.
-Phần nguồn lịch âm tuân thủ điều kiện bản quyền của tác giả gốc.

@@ -1,32 +1,38 @@
 # jeexles.licham
 
-Website/PWA xem lịch âm – dương Việt Nam, giao diện tương thích điện thoại, tablet và máy tính; thương hiệu **jeexles**.
+**Lịch âm – dương Việt Nam** · Được tạo bởi **jeexles**.
 
-## Chức năng
+Website/PWA giao diện tối giản, hoạt động trên Android, iPhone, tablet và máy tính.
 
-- Xem lịch tháng với **ngày dương lớn, ngày âm nhỏ** và đánh dấu ngày lễ/sự kiện.
-- Trang Hôm nay: âm lịch, can chi, tiết khí và giờ hoàng đạo (thông tin tham khảo).
-- Chuyển đổi **dương → âm** và **âm → dương**, bao gồm tháng nhuận.
-- Xem các ngày lễ Việt Nam và lưu sinh nhật, kỷ niệm hoặc sự kiện riêng (một lần / hằng năm) trên thiết bị.
-- Tìm về hôm nay, đổi tháng, xem sự kiện sắp tới, cài đặt tuần bắt đầu thứ Hai/Chủ Nhật.
-- Không cần máy chủ, tài khoản, API hay Supabase. Dữ liệu sự kiện lưu bằng `localStorage` trình duyệt.
-- Có PWA, service worker, icon, chạy lại khi offline sau lần truy cập và cài thành app từ trình duyệt.
+## Tính năng
 
-## Cách chạy
+- Xem lịch tháng có ngày âm và dương song song; chọn từng ngày để xem chi tiết.
+- Chuyển đổi âm ↔ dương (có hỗ trợ tháng nhuận).
+- Xem can chi, giờ hoàng đạo và 24 tiết khí dưới dạng thông tin tham khảo.
+- Ngày lễ Việt Nam, sự kiện sắp tới và sự kiện riêng (lưu trên thiết bị).
+- Cài đặt dạng PWA, hỗ trợ dùng ngoại tuyến sau lần tải thành công đầu tiên.
+- Không sử dụng API bên ngoài, tài khoản, Supabase hay máy chủ lưu trữ sự kiện.
 
-Mở bằng một HTTP server tĩnh, không mở trực tiếp file `index.html` để dùng đầy đủ chức năng PWA.
+## Bộ máy tính lịch
+
+`lunar-core.js` là mã tính toán thiên văn được triển khai riêng cho dự án, sử dụng các công thức tính kỳ trăng mới, kinh độ Mặt Trời và quy tắc lịch âm – dương Việt Nam tại múi giờ UTC+7. Toàn bộ mã nguồn tính lịch trong phiên bản này được triển khai riêng cho dự án.
+
+Phạm vi giao diện: **1901–2098**. Các ngày lịch thiên văn lịch sử xa và những trường hợp nằm sát thời điểm giao thoa múi giờ có thể chênh lệch so với lịch niên giám chính thức; nên đối chiếu nguồn lịch chuẩn cho nhu cầu pháp lý hay nghi lễ quan trọng. Ngày lễ không đại diện cho lịch nghỉ lễ chính thức từng năm.
+
+## Chạy và xuất bản
+
+Dùng web server tĩnh (PWA cần HTTPS hoặc localhost):
 
 ```sh
 python -m http.server 8000
 ```
 
-Mở http://localhost:8000. Có thể đưa toàn bộ thư mục lên **Vercel** (Other / Static Website) hoặc GitHub Pages. PWA chỉ được cài đặt qua HTTPS hoặc localhost.
+Sau đó mở `http://localhost:8000`. Có thể triển khai thư mục này lên Vercel hoặc GitHub Pages, không cần build.
 
-## Ghi chú
+## Thương hiệu
 
-Ngày hôm nay lấy theo múi giờ **Asia/Ho_Chi_Minh (GMT+7)**. Dải năm giao diện được hỗ trợ: **1901–2098**. Những ngày lễ cố định dùng để nhắc xem, không thay thế lịch nghỉ lễ chính thức do Nhà nước công bố hằng năm.
+- **Tên sản phẩm:** jeexles.licham
+- **Tác giả và đơn vị phát triển:** jeexles
+- **Phiên bản:** 2.0
 
-## Bản quyền
-
-- Phần giao diện, tích hợp và thương hiệu của dự án: **jeexles — jeexles.licham**.
-- Thuật toán lịch âm sửa đổi từ **jQuery.AmLich v0.3.1** / Hồ Ngọc Đức, kèm thông báo bản quyền tại `lunar-core.js` và `licenses/NOTICE.txt`. Phần mã thuật toán có giới hạn **dùng cho mục đích cá nhân, phi thương mại** theo giấy phép đính kèm. Nếu muốn sử dụng dự án theo hướng thương mại, cần xin phép chủ sở hữu thuật toán hoặc thay thế bằng nguồn có giấy phép phù hợp.
+© 2026 jeexles. All rights reserved.
